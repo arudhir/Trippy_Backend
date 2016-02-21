@@ -1,0 +1,15 @@
+{% extends "triplist/base.html" %}
+{% block content %}
+<ul>
+{% for trips in tripList %}
+<li style="color:{% cycle 'blue' 'green' %}">{{trips.available_drivers}}</li>
+<li>{{trips.seats_available}}</li>
+<li>{{trips.destinations}}</li>
+<li>{{trips.price}}</li>
+<li>{{trips.misc_descriptions}}</li>
+<li>{{trips.departure_time}}</li>
+{% endfor %}
+</ul>
+{% endblock %}
+
+
